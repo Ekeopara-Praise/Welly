@@ -103,7 +103,15 @@ class Isochronal:
         plt.show()
 
     def AOF(self):
+        """
+           Method outputs the Absolute Open Flow of the well.
 
+           Args:
+               None
+
+           Returns:
+               float dtype: Qmax value
+        """
         Qmax = self.c_factor() * ((self.Pr ** 2 - 14.73 ** 2) ** self.n_factor())
 
         return round(Qmax, 4)
